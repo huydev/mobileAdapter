@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  background: #eee;
+}
+.photos{
+  margin: 20px auto 0;
+  width: 600px;
+  height: 400px;
+  background: #ccc;
+}
+h1 {
+  width: 600px;
+  margin: 0 auto;
+}
+p{
+  width: 600px;
+  margin: 0 auto;
+  font-size: 24px;
+}
+.testline {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+  background: #fff;
+  border-top: 1px solid #000;/*no*/
+  padding: 20px;
+}
+.testline:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;/*no*/
+  border-bottom: 1px solid #000;/*no*/
+  background: transparent;
+  transform: scaleY(.5);
+}
+.qrcode{
+  width: 280px;
+  height: 280px;
+  margin-left: 20px;
+}
+.qrcode img{
+  width: 100%;
+}
