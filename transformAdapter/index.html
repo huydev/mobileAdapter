@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>transform adapter</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="content">
+		<div class="page">
+			<h1>轮播框</h1>
+			<div class="photos">
+				<div class="item">1</div>
+				<div class="item">1</div>
+				<div class="item">1</div>
+			</div>
+			<h1>排版</h1>
+			<p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+			<h1>边框粗细</h1>
+			<div class="testline">线条粗细演示</div>
+			<h1>二维码识别</h1>
+			<div class="qrcode"><img src="images/test.png" alt=""></div>
+		</div>
+		<div class="page">
+			<h1>轮播框</h1>
+			<div class="photos">
+				<div class="item">1</div>
+				<div class="item">1</div>
+				<div class="item">1</div>
+			</div>
+			<h1>排版</h1>
+			<p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+			<h1>边框粗细</h1>
+			<div class="testline">线条粗细演示</div>
+			<h1>二维码识别</h1>
+			<div class="qrcode"><img src="images/test.png" alt=""></div>
+		</div>
+		<div class="page">
+			<h1>轮播框</h1>
+			<div class="photos">
+				<div class="item">1</div>
+				<div class="item">1</div>
+				<div class="item">1</div>
+			</div>
+			<h1>排版</h1>
+			<p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+			<h1>边框粗细</h1>
+			<div class="testline">线条粗细演示</div>
+			<h1>二维码识别</h1>
+			<div class="qrcode"><img src="images/test.png" alt=""></div>
+		</div>
+	</div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	var vw = window.innerWidth;
+	var dw = $('#content').width();
+	var scale = vw / dw
+	$('#content').css({
+		'transformOrigin': '0 0',
+		'transform': 'scale('+ scale +')'
+	});
+	$('#wrapper').css({
+		width: $('#wrapper').width() * scale + 'px',
+		height: $('#wrapper').height() * scale + 'px'
+	})
+</script>
+</body>
+</html>
