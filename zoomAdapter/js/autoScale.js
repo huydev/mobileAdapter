@@ -1,3 +1,8 @@
+/**
+ * zoom版
+ * https://github.com/huydev/mobileAdapter
+ * huychangdev@gmail.com
+ */
 ;(function(window, document){
 	function throttle(fn, delay){ //节流函数(delay 毫秒后执行)
 	  var timer = null;
@@ -10,12 +15,15 @@
 	    },delay);
 	  }
 	}
-	window.addEventListener('load', function(){
+	function setScale(){
 		var vw = window.innerWidth;
-		document.body.style.zoom = vw / 750;
+		document.getElementById('wrapper').style.zoom = vw / 750;
+	}
+
+	document.addEventListener('DOMContentLoaded', function(){
+		setScale();
 	});
 	window.addEventListener('resize', throttle(function(){
-		var vw = window.innerWidth;
-		document.body.style.zoom = vw / 750;
+		setScale();
 	}, 100));
 })(window, document);
