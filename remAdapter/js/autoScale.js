@@ -1,6 +1,7 @@
 /**
  * rem精简版
- * 不考虑dpr，全部当成1倍屏来处理。
+ * https://github.com/huydev/mobileAdapter
+ * huychangdev@gmail.com
  */
 ;(function(win, doc){
   function throttle(fn, delay){ //节流函数(delay 毫秒后执行)
